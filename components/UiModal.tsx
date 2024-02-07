@@ -9,9 +9,11 @@ export default function UiModal(){
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     const formAction = async (formData:FormData) => {
-        await addUser(formData);
-        toast.success('User Add successfully');
+        const res: any = await addUser(formData);
+        if(res?.status == 402) toast.error(res.message);
+        else toast.success('Everything is good')
     }
+
     
     return (
         <>
