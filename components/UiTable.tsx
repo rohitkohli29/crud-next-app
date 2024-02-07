@@ -49,7 +49,7 @@ const UiTable = ({data}:{
 
   return (
     <>
-      <UiSearch handleChange={handleChange}/>
+    <UiSearch handleChange={handleChange}/>
       <Table
         aria-label="User Table"
         isStriped
